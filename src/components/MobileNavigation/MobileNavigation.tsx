@@ -1,14 +1,17 @@
 import { Popover, Transition } from '@headlessui/react'
-import { Fragment } from 'react'
+import { Fragment, useContext } from 'react'
+import ThemeContext from '../../context/themeProvider'
+import { MobileNavIcon } from './MobileNavIcon'
 
 export function MobileNavigation() {
+  const { isDarkTheme } = useContext(ThemeContext)
   return (
     <Popover>
       <Popover.Button
         className='relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none'
         aria-label='Toggle Navigation'
       >
-        {({ open }) => <MobileNavIcon open={open} />}
+        {({ open }) => <MobileNavIcon open={open} isDarkTheme={isDarkTheme} />}
       </Popover.Button>
       <Transition.Root>
         <Transition.Child
@@ -20,7 +23,7 @@ export function MobileNavigation() {
           leaveFrom='opacity-100'
           leaveTo='opacity-0'
         >
-          <Popover.Overlay className='fixed inset-0 bg-slate-300/50' />
+          <Popover.Overlay className='fixed inset-0 dark:bg-slate-700/50 bg-slate-300/50' />
         </Transition.Child>
         <Transition.Child
           as={Fragment}
@@ -33,7 +36,7 @@ export function MobileNavigation() {
         >
           <Popover.Panel
             as='div'
-            className='absolute inset-x-0 flex flex-col p-4 mt-4 text-lg tracking-tight origin-top bg-white shadow-xl top-full rounded-2xl text-slate-900 ring-1 ring-slate-900/5'
+            className='absolute inset-x-0 flex flex-col p-4 mt-4 text-lg tracking-tight origin-top dark:bg-gray-800 bg-white shadow-xl top-full rounded-2xl dark:text-white text-slate-900 ring-1 ring-slate-900/5'
           >
             <MobileNavLink href='#sueldos'>Inicio</MobileNavLink>
             <MobileNavLink href='#api'>Experiencia</MobileNavLink>
@@ -60,26 +63,3 @@ function MobileNavLink({ href, children }: MobileNavLinkProps) {
   )
 }
 
-interface MobileNavIconProps {
-  open: boolean
-}
-function MobileNavIcon({ open }: MobileNavIconProps) {
-  return (
-    <svg
-      aria-hidden='true'
-      className='h-3.5 w-3.5 overflow-visible stroke-slate-700'
-      fill='none'
-      strokeWidth={2}
-      strokeLinecap='round'
-    >
-      <path
-        d='M0 1H14M0 7H14M0 13H14'
-        className={` origin-center transition ${open && 'scale-90 opacity-0'} `}
-      />
-      <path
-        d='M2 2L12 12M12 2L2 12'
-        className={`origin-center transition ${!open && 'scale-90 opacity-0'}`}
-      />
-    </svg>
-  )
-}

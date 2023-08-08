@@ -1,7 +1,6 @@
-import React from 'react'
 
 export const Experience = () => {
   return (
-    <div>Experience</div>
+    <div className='h-screen mx-auto container'>Experience</div>
   )
 }

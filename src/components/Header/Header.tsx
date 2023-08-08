@@ -1,10 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import ThemeContext from "../../context/themeProvider";
 import { MoonIcon } from "../../icons/MoonIcon";
 import { SunIcon } from "../../icons/SunIcon";
 import { ToggleTheme } from "./ToggleTheme";
 import { MobileNavigation } from "../MobileNavigation/MobileNavigation";
+import { ToggleLanguage } from "./ToggleLanguage";
 
 export const Header = () => {
   const { t } = useTranslation('', { keyPrefix: 'home' })
@@ -15,17 +16,18 @@ export const Header = () => {
     >
       <div className="flex justify-between w-full p-4 items-center mx-auto md:container">
 
-        <h1 className="text-red text-3xl font-bold underline  ">Fernando Mercado</h1>
-        <nav className="hidden dark:text-white  gap-10 lg:flex">
-          <a href="#home">{t('home')}</a>
-          <a href="#home">{t('experience')}</a>
-          <a href="#home">{t('about_me')}</a>
-          <a href="#home">{t('contact')}</a>
+        <h1 className="text-red text-3xl font-bold underline  ">Fernando <br /> Mercado</h1>
+        <nav className="hidden dark:text-white font-medium  gap-10 lg:flex">
+          <a className="hover:text-blue-600" href="#home">{t('home')}</a>
+          <a className="hover:text-blue-600" href="#home">{t('experience')}</a>
+          <a className="hover:text-blue-600" href="#home">{t('about_me')}</a>
+          <a className="hover:text-blue-600" href="#home">{t('contact')}</a>
         </nav>
         <div className='-mr-1 lg:hidden'>
           <MobileNavigation />
         </div>
         <div className="gap-2 items-center justify-center hidden lg:flex">
+        <ToggleLanguage/>
           <SunIcon color={isDarkTheme ? '#4B5563' : '#000'} />
           <ToggleTheme />
           <MoonIcon color={isDarkTheme ? '#fff' : '#9CA3AF'} />
