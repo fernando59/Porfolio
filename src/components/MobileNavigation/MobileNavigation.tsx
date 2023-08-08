@@ -1,14 +1,19 @@
 import { Popover, Transition } from '@headlessui/react'
 import { Fragment, useContext } from 'react'
-import ThemeContext from '../../context/themeProvider'
+import AppContext from '../../context/appProvider'
 import { MobileNavIcon } from './MobileNavIcon'
+import { useTranslation } from 'react-i18next'
+import { SunIcon } from '../../icons/SunIcon'
+import { ToggleTheme } from '../Header/ToggleTheme'
+import { MoonIcon } from '../../icons/MoonIcon'
 
 export function MobileNavigation() {
-  const { isDarkTheme } = useContext(ThemeContext)
+  const { isDarkTheme, toggleLanguage,  language } = useContext(AppContext)
+  const { t } = useTranslation('', { keyPrefix: 'home' })
   return (
-    <Popover>
+    <Popover >
       <Popover.Button
-        className='relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none'
+        className='relative z-20 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none'
         aria-label='Toggle Navigation'
       >
         {({ open }) => <MobileNavIcon open={open} isDarkTheme={isDarkTheme} />}
@@ -23,7 +28,7 @@ export function MobileNavigation() {
           leaveFrom='opacity-100'
           leaveTo='opacity-0'
         >
-          <Popover.Overlay className='fixed inset-0 dark:bg-slate-700/50 bg-slate-300/50' />
+          <Popover.Overlay className='fixed z-20 inset-0 dark:bg-slate-700/50 bg-slate-300/50' />
         </Transition.Child>
         <Transition.Child
           as={Fragment}
@@ -36,14 +41,23 @@ export function MobileNavigation() {
         >
           <Popover.Panel
             as='div'
-            className='absolute inset-x-0 flex flex-col p-4 mt-4 text-lg tracking-tight origin-top dark:bg-gray-800 bg-white shadow-xl top-full rounded-2xl dark:text-white text-slate-900 ring-1 ring-slate-900/5'
+            className='absolute z-20 inset-x-0 flex flex-col p-4 mt-4 text-lg tracking-tight origin-top dark:bg-gray-800 bg-white shadow-xl top-full rounded-2xl dark:text-white text-slate-900 ring-1 ring-slate-900/5'
           >
-            <MobileNavLink href='#sueldos'>Inicio</MobileNavLink>
-            <MobileNavLink href='#api'>Experiencia</MobileNavLink>
-            <MobileNavLink href='#faq'>Sobre Mi </MobileNavLink>
-            <MobileNavLink href='#faq'>Contactame </MobileNavLink>
-            <MobileNavLink href='#faq'>Dark Mode</MobileNavLink>
-            <MobileNavLink href='#faq'>Language</MobileNavLink>
+            <MobileNavLink href='#home'>{t('home')}</MobileNavLink>
+            <MobileNavLink href='#experience'>{t('experience')}</MobileNavLink>
+            <MobileNavLink href='#about_me'>{t('about_me')}</MobileNavLink>
+            <MobileNavLink href='#contact'>{t('contact')}</MobileNavLink>
+            <Popover.Button onClick={() => toggleLanguage(language === 'es' ? 'en' : 'es')} className='block w-full p-2 text-left'>
+              {language.toUpperCase()} {t('language')}
+            </Popover.Button>
+            <div className="gap-2 items-center justify-center  flex">
+              <SunIcon color={isDarkTheme ? '#4B5563' : '#000'} />
+              <ToggleTheme />
+              <MoonIcon color={isDarkTheme ? '#fff' : '#9CA3AF'} />
+            </div>
+
+
+
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -51,7 +65,7 @@ export function MobileNavigation() {
   )
 }
 interface MobileNavLinkProps {
-  href: any
+  href: string
   children: any
 
 }

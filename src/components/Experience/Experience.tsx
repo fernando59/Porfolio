@@ -1,6 +1,6 @@
 
 export const Experience = () => {
   return (
-    <div className='h-screen mx-auto container'>Experience</div>
+    <div id="experience" className='h-screen mx-auto container'>Experience</div>
   )
 }

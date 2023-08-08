@@ -1,9 +1,11 @@
 {
   "home": {
-    "title": "title",
     "about_me": "About Me",
     "home": "Home",
     "contact": "Contact Me",
-    "experience": "Experience"
+    "dark_mode":"Dark Mode",
+    "language":"Language",
+    "experience": "Experience",
+    "light_mode":"Light Mode"
   }
 }
