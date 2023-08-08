@@ -1,11 +1,25 @@
-import { useTranslation } from 'react-i18next'
 import './App.css'
+import { useContext } from 'react'
+import ThemeContext from './context/themeProvider'
+import { Header } from './components/Header/Header'
+import { About } from './components/About/About'
+import { Footer } from './components/Footer/Footer'
+import { Experience } from './components/Experience/Experience'
+import { Projects } from './components/Projects/Projects'
 
 function App() {
-  const {t} = useTranslation('',{ keyPrefix: 'home' })
+  const { isDarkTheme } = useContext(ThemeContext)
   return (
     <>
-    <h1>{t('title')}</h1>
+      <div className={`${isDarkTheme ? 'dark' : ''} `}>
+        <div className='dark:bg-gray-800'>
+          <Header />
+          <About />
+          <Experience />
+          <Projects />
+          <Footer />
+        </div>
+      </div>
     </>
   )
 }

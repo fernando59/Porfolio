@@ -1,5 +1,9 @@
 {
   "home": {
-    "title": "titulo"
+    "title": "title",
+    "about_me": "Sobre mi",
+    "home": "Inicio",
+    "contact": "Contactame ",
+    "experience": "Experiencia"
   }
 }

@@ -1,5 +1,9 @@
 {
   "home": {
-    "title": "title"
+    "title": "title",
+    "about_me": "About Me",
+    "home": "Home",
+    "contact": "Contact Me",
+    "experience": "Experience"
   }
 }
