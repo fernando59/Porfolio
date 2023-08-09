@@ -15,7 +15,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`dark:bg-gray-800 dark:text-white relative `}
+      className={`dark:bg-gray-800 dark:text-white  relative `}
     >
       <div className="flex justify-between w-full p-4 items-center mx-auto md:container">
         <IconPage />
