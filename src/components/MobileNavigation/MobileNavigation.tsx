@@ -45,8 +45,8 @@ export function MobileNavigation() {
           >
             <MobileNavLink href='#home'>{t('home')}</MobileNavLink>
             <MobileNavLink href='#experience'>{t('experience')}</MobileNavLink>
-            <MobileNavLink href='#about_me'>{t('about_me')}</MobileNavLink>
-            <MobileNavLink href='#contact'>{t('contact')}</MobileNavLink>
+            <MobileNavLink href='#about'>{t('about_me')}</MobileNavLink>
+            <MobileNavLink href='#services'>{t('services')}</MobileNavLink>
             <Popover.Button onClick={() => toggleLanguage(language === 'es' ? 'en' : 'es')} className='block w-full p-2 text-left'>
               {language.toUpperCase()} {t('language')}
             </Popover.Button>

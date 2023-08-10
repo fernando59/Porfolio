@@ -1,11 +1,35 @@
 {
   "home": {
-    "about_me": "Sobre mi",
+    "about_me": "Sobre mí",
     "home": "Inicio",
     "contact": "Contáctame ",
     "experience": "Experiencia",
+    "services": "Servicios",
     "language":"Lenguaje",
     "dark_mode":"Modo Oscuro ",
     "light_mode":"Modo Claro"
+  },
+  "hero":{
+    "description":"Desarrollador de software con una sólida experiencia de tres años en desarrollo Full Stack. Mi enfoque principal está en utilizar tecnologías de vanguardia como React, Flutter, Node JS y .Net Core para crear soluciones sólidas y eficientes.",
+    "button_download":"Descargar CV"
+  },
+  "experience":{
+    "title":"Experiencia",
+    "Encora":{
+      "description":"Colaboración en el desarrollo de un sistema de reserva de espacios de trabajo y estacionamiento. Además, también desarrollé un sistema de marcación de asistencia para empleados e implementé una arquitectura limpia para el proyecto. Las tecnologías utilizadas son React, .Net Core, Docker y Flutter."
+    },
+    "Workana":{
+      "description":"Freelance especializado en el desarrollo de aplicaciones web utilizando .NET Core y React JS. Amplia experiencia en la creación de soluciones eficientes y escalables, combinando el poder del backend con .NET Core y la interactividad del frontend con React JS. Capaz de trabajar de manera independiente, adaptarse a los requisitos del cliente y entregar proyectos de alta calidad en tiempo."
+
+    },
+    "MilSoluciones":{
+      "description":"Colaboré en el desarrollo de módulos de solicitudes utilizando Angular en el frontend y Asp Core en el backend, asegurando soluciones eficientes y escalables. Contribuí al desarrollo del backend utilizando Laravel y manejé la configuración de envío de correos electrónicos. Además, participé en el desarrollo del frontend utilizando Vue.js con Inertia JS, brindando una experiencia de usuario interactiva y atractiva."
+    }
+  },
+  "about":{
+    "title":"Sobre Mí"
+  },
+  "services":{
+    "title":"Servicios"
   }
 }
