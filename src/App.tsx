@@ -6,7 +6,6 @@ import { Hero } from './components/Hero/Hero'
 import { Footer } from './components/Footer/Footer'
 import { Experience } from './components/Experience/Experience'
 import { Services } from './components/Services/Services'
-import { About } from './components/About/About'
 import { Technologies } from './components/Technologies/Technologies'
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
           <Header />
           <Hero />
           <Experience />
-          {/* <About/> */}
           <Services />
           <Technologies/>
           <Footer />

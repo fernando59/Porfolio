@@ -31,9 +31,16 @@
     "title":"Experience"
   },
   "services":{
-    "title":"Services"
+    "title":"Services",
+    "web_development_title":"Custom Web Application Development",
+    "web_development_description":"From conception to implementation, I can create customized web applications that meet the specific needs of your company. I employ the latest technologies to ensure that the applications are intuitive, engaging, and high-performing",
+    "landing_development_title":"Professional Landing Page Development",
+    "landing_development_description":"Experience our incredible Landing Page creation service that empowers you to showcase your products, services, or events in a stunning manner. Together, we can bring your ideas to life and craft a tailored landing page that seamlessly aligns with your visual preferences. We will harness the power of HTML, CSS, and JavaScript.",
+    "mobile_development_title":"Custom Mobile Applications",
+    "mobile_development_description":"Stunning and Customized Mobile Applications that Adapt to the Unique Needs of Your Business. With expertise in design, development, and optimization, I deliver intuitive and captivating mobile solutions that capture the essence of your vision and provide an exceptional user experience."
   },
   "technologies":{
     "title":"Technologies"
+
   }
 }

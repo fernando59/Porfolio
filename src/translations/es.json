@@ -31,7 +31,13 @@
     "title":"Sobre Mí"
   },
   "services":{
-    "title":"Servicios"
+    "title":"Servicios",
+    "web_development_title":"Desarrollo de Aplicaciones Web a medida",
+    "web_development_description":"Creación de  aplicaciones web a medida que satisfagan las necesidades específicas de tu empresa. Utilizo las tecnologías más actuales para garantizar que las aplicaciones sean intuitivas, atractivas y de alto rendimiento.",
+    "landing_development_title":"Desarrollo Profesional de Landing Page",
+    "landing_development_description":"Increíble servicio de creación de Landing Page que te permitirá presentar tus productos, servicios o eventos de manera asombrosa.Podemos dar vida a tus ideas y crear una página de destino personalizada que se adapte perfectamente a tus preferencias visuales. Utilizaremos HTML, CSS y JavaScript para hacer realidad tu visión.",
+    "mobile_development_title":"Aplicaciones Mobiles a medida",
+    "mobile_development_description":"Aplicaciones móviles impresionantes y personalizadas que se adapten a las necesidades únicas de tu negocio. Con experiencia en diseño, desarrollo y optimización, te proporciono soluciones móviles intuitivas y atractivas que capturan la esencia de tu visión y brindan una experiencia excepcional a tus usuarios."
   },
   "technologies":{
     "title":"Tecnologías"
