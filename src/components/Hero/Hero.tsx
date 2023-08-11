@@ -3,6 +3,7 @@ import ProgrammingAnimation from '../../assets/json/programming.json';
 import { GithubIcon } from "../../icons/GithubIcon";
 import { LinkedinIcon } from "../../icons/LinkedinIcon";
 import { useTranslation } from "react-i18next";
+import { GmailIcon } from "../../icons/GmailIcon";
 export const Hero = () => {
 
   const { t } = useTranslation('', { keyPrefix: 'hero' })
@@ -23,7 +24,7 @@ export const Hero = () => {
 
         <div className="flex flex-col-reverse w-full justify-between  lg:justify-between  lg:flex-row ">
 
-          <div className="w-full py-20">
+          <div className="w-full py-20 px-4 lg:px-0">
             <h1 className="text-5xl font-bold">Fernando Mercado</h1>
             <h1 className="text-3xl text-blue-600 font-bold py-4 ">FullStack Developer</h1>
             <p className="w-full  lg:w-3/6 tracking-widest leading-6 py-10">{t('description')}</p>
@@ -33,6 +34,7 @@ export const Hero = () => {
               <button onClick={downloadResume} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 border rounded">{t('button_download')}</button>
               <a className="hover:text-blue-600" target="_blank" href="https://github.com/fernando59"><GithubIcon width={32} height={32} /></a>
               <a  className="hover:text-blue-600" target="_blank" href="https://www.linkedin.com/in/fernando-mercado-saby"><LinkedinIcon width={32} height={32} /></a>
+              <a  className="hover:text-blue-600" target="_blank" href="mailto:fernandomercado529@gmail.com"><GmailIcon width={32} height={32} /></a>
             </div>
 
           </div>

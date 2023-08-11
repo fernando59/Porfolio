@@ -23,8 +23,8 @@ export const Header = () => {
         <nav className="hidden dark:text-white font-medium  gap-20 lg:flex">
           <a className="hover:text-blue-600" href="#home">{t('home')}</a>
           <a className="hover:text-blue-600" href="#experience">{t('experience')}</a>
-          <a className="hover:text-blue-600" href="#about">{t('about_me')}</a>
           <a className="hover:text-blue-600" href="#services">{t('services')}</a>
+          <a className="hover:text-blue-600" href="#technologies">{t('technology')}</a>
         </nav>
 
         <div className="gap-2 items-center justify-center hidden lg:flex">

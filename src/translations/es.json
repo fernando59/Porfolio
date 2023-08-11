@@ -4,6 +4,7 @@
     "home": "Inicio",
     "contact": "Contáctame ",
     "experience": "Experiencia",
+    "technology": "Tecnologías",
     "services": "Servicios",
     "language":"Lenguaje",
     "dark_mode":"Modo Oscuro ",
@@ -31,5 +32,8 @@
   },
   "services":{
     "title":"Servicios"
+  },
+  "technologies":{
+    "title":"Tecnologías"
   }
 }
